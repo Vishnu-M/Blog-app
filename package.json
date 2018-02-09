@@ -10,10 +10,13 @@
     "type": "git",
     "url": "git+https://github.com/Vishnu-M/Blog-app.git"
   },
-  "author": "",
+  "author": "Vishnu,Abhinav",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Vishnu-M/Blog-app/issues"
   },
-  "homepage": "https://github.com/Vishnu-M/Blog-app#readme"
+  "homepage": "https://github.com/Vishnu-M/Blog-app#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
 }
