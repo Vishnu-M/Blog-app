@@ -10,6 +10,7 @@ app.get('/', function(req, res) {
     res.sendFile(path.join(TEMPLATE_DIR + '/index.html'));
 });
 
-app.listen(8090);
+app.listen(8090, ()=>{
+    console.info("==> 🌎 Development Server started at http://127.0.0.1:8090");
+});
 
-console.log("[+] Development Server started at http://127.0.0.1:8090");
