@@ -1,33 +1,15 @@
-const http = require('http');
-const url = require('url');
-const mysql = require('mysql');
+var express = require('express');
+var app = express();
+var path = require('path');
 
-const conn = mysql.createConnection({
-    host:"localhost",
-    user:"root",
-    password:"root"
+const TEMPLATE_DIR = __dirname + '/templates';
+
+
+app.get('/', function(req, res) {
+    app.use('/assets',express.static('templates/assets'));
+    res.sendFile(path.join(TEMPLATE_DIR + '/index.html'));
 });
 
-conn.connect(function(err){
-    if (err){
-        throw err;
-    }
-    console.log('Connected');
-})
+app.listen(8090);
 
-http.createServer(function(req,res){
-    res.writeHead(200,{'Content-Type':'text/plain'});
-    res.end("Hello");
-
-    var q = url.parse(req.url,true);
-    console.log(q);
-    // conn.query(q., function(err,result){
-    //     if (err) throw err;
-    //     console.log("Result : " + result);
-    // });
-    
-    
-
-}).listen(8090);
-
-console.log("Server Started at 127.0.0.1:8090.....");
+console.log("[+] Development Server started at http://127.0.0.1:8090");
