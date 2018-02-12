@@ -23,16 +23,23 @@
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/vendor.css">
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
 
     <!-- script
     ================================================== -->
     <script src="assets/js/modernizr.js"></script>
     <script src="assets/js/pace.min.js"></script>
+    <script src="assets/js/index.js"></script>
 
     <!-- favicons
     ================================================== -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
 
 </head>
 
@@ -72,31 +79,38 @@
 
         <div class="home-content">
 
-            <div class="row home-content__main">
+            <div class="w3-row-padding">
+                <div class="w3-half">
+                        <div class="row" style="margin-top:15vh; padding-top:20vh">
 
-                <h3>Hello There</h3>
+                                <h2 class="kit">
+                                        BLoiCK - Blog Quick <br>
+                                        Open Up, Change the world
+                                </h2>          
+                        </div>
+                </div>
+                <div class="w3-half">
+                
+                <div>
+                    
+                    <form class="form" action="/signup" method="POST">
+                            <h2>Sign Up</h2>
+                            Username:
+                            <input type="text" name="username" style="width:100%" class="form-input">
+                            Password:
+                            <input type="password" name="password"  style="width:100%" class="form-input">
+                            Confirm Password:
+                            <input type="password" name="Confirm Password" style="width:100%" class="form-input">
 
-                <h1>
-                    BLoiCK - Blog Quick <br>
-                    Open Up, Change the world
-                </h1>
-
-                <div class="home-content__buttons">
-                    <a href="#works" class="smoothscroll btn btn--stroke">
-                        Latest Projects
-                    </a>
-                    <a href="#about" class="smoothscroll btn btn--stroke">
-                        More About Me
-                    </a>
+                            <input type="submit" value="Sign Up">
+                        </form>
                 </div>
 
-                <div class="home-content__scroll">
-                    <a href="#about" class="scroll-link smoothscroll">
-                        <span>Scroll Down</span>
-                    </a>
-                </div>
-
+                
             </div>
+                
+                
+           
 
         </div> <!-- end home-content -->
 
